@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+}
+.container-fluid{
+  background-color: rgb(224, 224, 224);
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 1rem;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .card{
+    border: 0.5px solid rgb(134, 134, 134) !important;
+  }
+
+  .card-body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0) !important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .card-img-top{
+    width: 100% !important;
+    height: auto !important;
+  }
+  .card-title {
+    font-size: 1rem;
+    line-height: 1.2;
+    max-height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.imgCarousel{
+  object-fit: fill !important;
+}
+@media (max-width: 768px) {
+    .carousel-item picture img {
+      height: 200px;
+      object-fit: cover !important;
+    }
+    .justify-content-around .card{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .justify-content-around .card img{
+        width: 100px !important;
+        height: auto !important;
+        object-fit: cover;
+    }
+    .card-body{
+        color: rgb(0, 0, 0) !important;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+      }
+      .card-title {
+        font-size: 0.85rem;
+      }
+      .contenedorlinks{
+        flex-direction: column;
+      }
+      .contenedorContactos{
+        margin-top: 7px;
+        margin-bottom: 7px;
+      }
+}

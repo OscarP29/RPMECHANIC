@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* ✅ Previene scroll horizontal */
+
+}
+.ContenedorRaiz{
+    background-color: rgb(224, 224, 224);
+}
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+.thumbnail-img{
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+.main-img{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+.BorderImg{
+    border: 1px solid #d40000;
+}
+.carousel{
+    display: none;
+}
+.divAndroid{
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        display: block;
+        width: 100%;
+    }
+
+    .d-block {
+        object-fit: contain;
+        height: 300px;
+        width: 100%;
+    }
+
+    #carouselWin {
+        display: none !important;
+    }
+
+    .mx-auto {
+        display: none;
+    }
+    .divAndroid{
+        display: block !important;
+    }
+    .TituloPC{
+        display: none;
+    }
+      .contenedorlinks{
+        flex-direction: column;
+      }
+      .contenedorContactos{
+        margin-top: 7px;
+        margin-bottom: 7px;
+      }
+}
