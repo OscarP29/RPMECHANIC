@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/Resources/Font/Roboto/static/Roboto-Light.ttf");
+}
 body{
     margin: 0;
+    font-family: "Roboto",Georgia;
 }
 .container-fluid{
   background-color: rgb(224, 224, 224);
+  font-family: "Roboto",Georgia;
 }
 .row {
   margin-left: 0 !important;
@@ -63,6 +69,11 @@ body{
   .card{
     border: 0.5px solid rgb(134, 134, 134) !important;
   }
+  .carta:hover .card{
+      scale: 1.1;
+      border: 2px solid black !important;
+      transition-duration: 0.3s;
+  }
 
   .card-body{
     background-color: rgb(255, 255, 255);
@@ -85,6 +96,9 @@ body{
 }
 .imgCarousel{
   object-fit: fill !important;
+}
+.aRedes:hover{
+    scale: 1.1;
 }
 @media (max-width: 768px) {
     .carousel-item picture img {
