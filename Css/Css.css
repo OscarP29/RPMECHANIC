@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Roboto";
-  src: url("/Resources/Font/Roboto/static/Roboto-Light.ttf");
+  src: url("../Resources/Font/Roboto/static/Roboto-Light.ttf");
 }
 body{
     margin: 0;
-    font-family: "Roboto",Georgia;
+    font-family: "Roboto",Georgia !important;
 }
 .container-fluid{
   background-color: rgb(224, 224, 224);
-  font-family: "Roboto",Georgia;
+  font-family: "Roboto",Georgia !important;
 }
 .row {
   margin-left: 0 !important;

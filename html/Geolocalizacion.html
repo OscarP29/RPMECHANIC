@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="../Css/Producto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../JS/geo.js"></script>
     <title>Tienda Fisica</title>
 </head>
@@ -22,24 +25,21 @@
             <div class="col-md-12 p-0">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
                     <div class="container-fluid bg-primary m-0">
-                        <a class="navbar-brand text-light fg-2 fw-bold" href="../index.html">
-                            <img src="../Resources/Icon.jpeg" alt="Logo" width="30" height="24"
-                                class="d-inline-block align-text-top">
-                            PR MECHANIC</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link text-light" href="#">Agendar Citas</a>
-                                <a class="nav-link text-light" href="#acerca">Acerca de Nosotros</a>
-                                <a class="nav-link text-light">Tienda Fisica</a>
-                            </div>
+                      <a class="navbar-brand text-light fg-2 fw-bold" href="../index.html" >
+                        <img src="../Resources/Icon.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        PR MECHANIC</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link text-light" href="/html/Calentario.html">Agendar Citas</a>
+                          <a class="nav-link text-light" href="#acerca">Acerca de Nosotros</a>
+                          <a class="nav-link text-light" href="/html/Geolocalizacion.html">Tienda Fisica</a>
                         </div>
+                      </div>
                     </div>
-                </nav>
+                  </nav>
             </div>
         </div>
         <div class="row">
@@ -48,26 +48,107 @@
                  </div>
             </div>
         </div>
-        <div class="row">
-              <div class="col-md-10 mx-auto mt-1 rounded-top-4 border-light bg-dark text-light footer">
-                  <div class="mx-2 mt-2">
-                    <h5 class="mt-3 fw-bold fs-6" id="acerca">Acerca de Nosotros</h5>
-                    <p> En RP MECHANIC, nos especializamos en la venta de repuestos para motos y carros, ofreciendo productos de calidad a precios competitivos. Nuestro compromiso es brindar atención personalizada y soluciones confiables para que tu vehículo siempre esté en óptimas condiciones.</p>
-                  </div>
-                  <div class="d-flex justify-content-between contenedorlinks">
-                    <div class="mx-2">
-                      <a href="" class="text-light">Trabaja con Nosotros</a>
-                      <a href="" class="mx-2 text-light"> Terminos y condiciones</a>
-                      <a href="" class="text-light">Como cuidamos tu privacidad</a>
-                    </div>
-                    <div class="d-flex mx-2 contenedorContactos">
-                      <p>Contactanos:</p>
-                      <a href="" class="mx-2 aRedes"><img src="" alt=""><img src="../Resources/iconWhatsApp.png" width="25px" height="25px" alt="WhatsApp"></a>
-                      <a href="" class="aRedes"><img src="../Resources/iconGmail.png" width="25px" height="25px" alt="Gmail"></a>
-                    </div>
-                  </div>
-              </div>
+            <div class="row">
+      <div class="col-md-10 mx-auto mt-5 rounded-top-4 border border-light bg-dark text-light p-4">
+
+
+        <div class="mb-4">
+          <h5 class="fw-bold fs-5" id="acerca">Acerca de Nosotros</h5>
+          <p class="mb-0">En <strong>RP MECHANIC</strong>, nos especializamos en la venta de repuestos para motos y
+            carros. Ofrecemos productos de calidad a precios competitivos, con atención personalizada y soluciones
+            confiables para mantener tu vehículo siempre en óptimas condiciones.</p>
+        </div>
+
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+
+
+          <div class="mb-3 mb-md-0">
+            <h6 class="fw-semibold">Información</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light " data-bs-toggle="modal" data-bs-target="#modalTrabajo">Trabaja con
+                  Nosotros</a></li>
+              <li><a href="#" class="text-light " data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y
+                  Condiciones</a></li>
+              <li><a href="#" class="text-light " data-bs-toggle="modal" data-bs-target="#modalPrivacidad">Cómo cuidamos
+                  tu privacidad</a></li>
+            </ul>
+          </div>
+
+
+          <div>
+            <h6 class="fw-semibold">Contáctanos</h6>
+            <div class="d-flex align-items-center gap-3">
+              <a href="https://wa.me/573246363579" target="_blank" class="text-light aRedes" title="WhatsApp">
+                <img src="../Resources/iconWhatsApp.png" width="30" alt="WhatsApp">
+              </a>
+              <a href="mailto:oaperezsanchez2925@gmail.com" class="text-light aRedes" title="Gmail">
+                <img src="../Resources/iconGmail.png" width="30" alt="Gmail">
+              </a>
             </div>
+          </div>
+
+        </div>
+
+
+        <div class="text-center mt-4">
+          <small class="text-secondary">© 2025 RP MECHANIC. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalTrabajo" tabindex="-1" aria-labelledby="modalTrabajoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTrabajoLabel">Trabaja con Nosotros</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            ¡Únete a nuestro equipo! Envíanos tu CV a <strong>rpmechanic@gmail.com</strong> y forma parte de una empresa
+            en crecimiento.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTerminosLabel">Términos y Condiciones</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Al utilizar nuestros servicios, aceptas los términos relacionados con la compra, entrega y devoluciones
+              de productos. Para más información contáctanos directamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-labelledby="modalPrivacidadLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalPrivacidadLabel">Política de Privacidad</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            Tus datos están seguros con nosotros. Solo usamos tu información para mejorar tu experiencia de compra y
+            nunca la compartimos con terceros.
+          </div>
+        </div>
+      </div>
+    </div>
+
     </div>
 
   <script src="../JS/JsPrincipal.js"></script>

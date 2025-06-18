@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RP MECHANIC</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin></script>
+
+
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+        <link rel="stylesheet" href="../Css/Producto.css">
+        <script
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container-fluid ContenedorRaiz m-0 p-0">
+            <div class="row">
+                <div class="col-md-12 p-0">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
+                    <div class="container-fluid bg-primary m-0">
+                      <a class="navbar-brand text-light fg-2 fw-bold" href="../index.html" >
+                        <img src="../Resources/Icon.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        PR MECHANIC</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link text-light" href="/html/Calentario.html">Agendar Citas</a>
+                          <a class="nav-link text-light" href="#acerca">Acerca de Nosotros</a>
+                          <a class="nav-link text-light" href="/html/Geolocalizacion.html">Tienda Fisica</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 p-0 my-3">
+                    <div class="container bg-white p-4 rounded shadow">
+                        <h2 class="fw-bold mb-4">Agendar</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="fw-bold">Datos</h4>
+                                <form id="Datos">
+                                    <div class="mb-3">
+                                        <label for="nombres"
+                                            class="form-label">Nombres</label>
+                                        <input type="text" class="form-control"
+                                            id="nombres" placeholder="nombres"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="apellidos"
+                                            class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control"
+                                            id="apellidos"
+                                            placeholder="apellidos" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="identificacion"
+                                                class="form-label">Identificación</label>
+                                            <input type="number"
+                                                class="form-control"
+                                                id="identificacion"
+                                                placeholder="Identificación"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="telefono"
+                                                class="form-label">Número
+                                                Telefónico</label>
+                                            <input type="number"
+                                                class="form-control"
+                                                id="telefono"
+                                                placeholder="Número" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="correo"
+                                            class="form-label">Correo
+                                            Electrónico</label>
+                                        <input type="email" class="form-control"
+                                            id="correo" placeholder="Correo"
+                                            required>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h4 class="fw-bold">Fecha</h4>
+                                <div id="fecha"
+                                    class="text-black p-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit"
+                                class="btn btn-dark w-100" form="Datos"
+                                target="_blank"
+                                onclick="enviarCorreo(event)">Agendar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+                <div class="row">
+      <div class="col-md-10 mx-auto mt-5 rounded-top-4 border border-light bg-dark text-light p-4">
+
+
+        <div class="mb-4">
+          <h5 class="fw-bold fs-5" id="acerca">Acerca de Nosotros</h5>
+          <p class="mb-0">En <strong>RP MECHANIC</strong>, nos especializamos en la venta de repuestos para motos y
+            carros. Ofrecemos productos de calidad a precios competitivos, con atención personalizada y soluciones
+            confiables para mantener tu vehículo siempre en óptimas condiciones.</p>
+        </div>
+
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+
+
+          <div class="mb-3 mb-md-0">
+            <h6 class="fw-semibold">Información</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light " data-bs-toggle="modal" data-bs-target="#modalTrabajo">Trabaja con
+                  Nosotros</a></li>
+              <li><a href="#" class="text-light " data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y
+                  Condiciones</a></li>
+              <li><a href="#" class="text-light " data-bs-toggle="modal" data-bs-target="#modalPrivacidad">Cómo cuidamos
+                  tu privacidad</a></li>
+            </ul>
+          </div>
+
+
+          <div>
+            <h6 class="fw-semibold">Contáctanos</h6>
+            <div class="d-flex align-items-center gap-3">
+              <a href="https://wa.me/573246363579" target="_blank" class="text-light aRedes" title="WhatsApp">
+                <img src="../Resources/iconWhatsApp.png" width="30" alt="WhatsApp">
+              </a>
+              <a href="mailto:oaperezsanchez2925@gmail.com" class="text-light aRedes" title="Gmail">
+                <img src="../Resources/iconGmail.png" width="30" alt="Gmail">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="text-center mt-4">
+          <small class="text-secondary">© 2025 RP MECHANIC. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalTrabajo" tabindex="-1" aria-labelledby="modalTrabajoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTrabajoLabel">Trabaja con Nosotros</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            ¡Únete a nuestro equipo! Envíanos tu CV a <strong>rpmechanic@gmail.com</strong> y forma parte de una empresa
+            en crecimiento.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTerminosLabel">Términos y Condiciones</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Al utilizar nuestros servicios, aceptas los términos relacionados con la compra, entrega y devoluciones
+              de productos. Para más información contáctanos directamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-labelledby="modalPrivacidadLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalPrivacidadLabel">Política de Privacidad</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            Tus datos están seguros con nosotros. Solo usamos tu información para mejorar tu experiencia de compra y
+            nunca la compartimos con terceros.
+          </div>
+        </div>
+      </div>
+    </div>
+
+            <div class="modal fade" id="modalExito" tabindex="-1"
+                aria-labelledby="modalExitoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-success">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="modalExitoLabel">✅ ¡Cita
+                                Agendada!</h5>
+                            <button type="button"
+                                class="btn-close btn-close-white"
+                                data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            Tu cita ha sido registrada. Nos vemos pronto
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success"
+                                data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="modalError" tabindex="-1"
+                aria-labelledby="modalErrorLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-danger">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="modalErrorLabel">❌ Error
+                                al Agendar</h5>
+                            <button type="button"
+                                class="btn-close btn-close-white"
+                                data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            Ocurrió un problema al enviar tu cita. Intenta de
+                            nuevo más tarde.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger"
+                                data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <script src="../JS/Calentario.js"></script>
+
+    </body>
+
+</html>

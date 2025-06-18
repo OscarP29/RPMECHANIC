@@ -16,7 +16,7 @@
   }
 
   function getMap(latitude, longitude) {
-    const map = L.map("map").setView([8.950553,-75.445561], 20); // 10 es el zoom
+    const map = L.map("map").setView([8.950185,-75.452208], 20); // 10 es el zoom
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-    L.marker([8.950553,-75.445561]).addTo(map).bindPopup('Sucursal <b>PR MECHANIC</b>').openPopup();
+    L.marker([8.950185,-75.452208]).addTo(map).bindPopup('Sucursal <b>PR MECHANIC</b>').openPopup();
   }

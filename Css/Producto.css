@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("/Resources/Font/Roboto/static/Roboto-Light.ttf");
+  src: url("../Resources/Font/Roboto/static/Roboto-Light.ttf");
 }
 body{
     margin: 0;
@@ -35,6 +35,10 @@ body{
 }
 .aRedes:hover{
     scale: 1.1;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Cambia el blanco a negro o viceversa */
 }
 
 @media (max-width: 768px) {
@@ -72,4 +76,5 @@ body{
     margin-top: 7px;
     margin-bottom: 7px;
     }
+
 }

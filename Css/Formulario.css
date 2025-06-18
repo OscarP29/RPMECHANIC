@@ -38,4 +38,10 @@ body{
         display: flex !important;
         border-radius: 15px !important;
     }
+    .cartaFormulario{
+        margin-top: 10px !important;
+    }
+    .TarjetaContenido {
+        margin: 0 10px 15px 10px !important; /* Márgenes laterales y abajo */
+    }
 }
